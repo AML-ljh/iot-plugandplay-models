@@ -1,0 +1,38 @@
+{
+    "@id" : "dtmi:aml:pfa;1",
+    "@type" : "Interface",
+    "displayName" : "PFA",
+    "contents" : [
+        {
+            "@type" : "Telemetry",
+            "name" : "Input",
+            "schema" : {
+                "@type" : "Object",
+                "fields" : [
+                    {
+                        "name" : "x",
+                        "schema" : {
+                            "@type" : "Array",
+                            "elementSchema" : "double"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "@type" : "Telemetry",
+            "name" : "Output",
+            "schema" : "double"
+        },
+        {
+            "@type" : "Command",
+            "name" : "Action"
+        },
+        {
+            "@type" : "Command",
+            "name" : "Functions"
+        }
+    ],
+    "@context": "dtmi:dtdl:context;2"
+        
+}

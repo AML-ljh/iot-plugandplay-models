@@ -1,0 +1,49 @@
+{
+    "@id" : "dtmi:aml:Digitaltwin;1",
+    "@type" : "Interface",
+    "displayname" : "TestMachine",
+    "contents" : [
+        {
+            "@type" : "Property",
+            "name" : "Value",
+            "schema" : "double"
+        },
+        {
+            "@type" : "Property",
+            "name" : "Timestamp",
+            "schema" : "datetime"
+        },
+        {
+            "@type" : "Component",
+            "name" : "PFA",
+            "schema" : "Avro"
+        },
+        {
+            "@type" : "Command",
+            "name" : "predict",
+            "request" : {
+                "name" : "predictenergy",
+                "displayName" : "Predict Energy",
+                "schema" : {
+                    "@type" : "Object",
+                    "fields" : [
+                    {
+                        "name" : "temperature",
+                        "schema" : "double"
+                    },
+                    {
+                        "name" : "temperature_time",
+                        "schema" : "double"
+                    }
+                    ]
+                }
+            },
+            "response" : {
+                "name" : "energyvalue",
+                "schema" : "double"
+            }
+        }
+    ],
+    "@context": "dtmi:dtdl:context;2"
+        
+}
